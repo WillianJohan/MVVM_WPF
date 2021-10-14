@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
 
-
 namespace MVVM_WPF_SimpleProject.ViewModel.Commands
 {
     public abstract class CommandBase : ICommand
