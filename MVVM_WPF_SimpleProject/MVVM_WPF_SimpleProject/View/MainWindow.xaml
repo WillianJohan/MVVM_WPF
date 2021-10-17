@@ -5,8 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVM_WPF_SimpleProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        MinHeight="600"
+        MinWidth="800"
+        Title="MainWindow" Width="1270" Height="720">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!--LOGO-->
+        <StackPanel Grid.Row="0" Grid.Column="0" Background="Orange"/>
+
+        <!--TITLE-->
+        <StackPanel Grid.Row="0" Grid.Column="1" Background="Orange">
+            <TextBlock x:Name="title_txtBlock" 
+                       Text="Tela inicial" 
+                       FontSize="20"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+        </StackPanel>
+        
+        <!--LEFT BAR-->
+        <StackPanel Grid.Row="1" Grid.Column="0" Background="Orange">
+            <Button Content="Tela Inicial"          FontSize="20" FontWeight="Bold" Height="45" Background="DarkOrange" BorderThickness="0" />
+            <Button Content="Lista de Clientes"     FontSize="20" FontWeight="Bold" Height="45" Background="DarkOrange" BorderThickness="0"/>
+            <Button Content="Todas as Consultas"    FontSize="20" FontWeight="Bold" Height="45" Background="DarkOrange" BorderThickness="0"/>
+
+        </StackPanel>
+        
+        <!--MainScreen-->
+           <!--Tem que ver como coloca tela aqui...-->
         
     </Grid>
 </Window>
