@@ -33,14 +33,18 @@
         
         <!--LEFT BAR-->
         <StackPanel Grid.Row="1" Grid.Column="0" Background="Orange">
-            <Button Content="Tela Inicial"          FontSize="20" FontWeight="Bold" Height="45" Background="DarkOrange" BorderThickness="0" />
-            <Button Content="Lista de Clientes"     FontSize="20" FontWeight="Bold" Height="45" Background="DarkOrange" BorderThickness="0"/>
-            <Button Content="Todas as Consultas"    FontSize="20" FontWeight="Bold" Height="45" Background="DarkOrange" BorderThickness="0"/>
+            <Button x:Name="btn_TelaInicial" Content="Tela Inicial" Click="btn_TelaInicial_Click" FontSize="20" FontWeight="Bold" Height="45" Background="DarkOrange" BorderThickness="0" />
+            <Button x:Name="btn_Clientes" Content="Lista de Clientes" Click="btn_Clientes_Click" FontSize="20" FontWeight="Bold" Height="45" Background="DarkOrange" BorderThickness="0"/>
+            <Button x:Name="btn_RegistrarClientes" Content="Registrar Cliente" Click="btn_RegistrarClientes_Click" FontSize="20" FontWeight="Bold" Height="45" Background="DarkOrange" BorderThickness="0"/>
+            <Button x:Name="btn_Consultas" Content="Todas as Consultas" Click="btn_Consultas_Click" FontSize="20" FontWeight="Bold" Height="45" Background="DarkOrange" BorderThickness="0"/>
 
         </StackPanel>
         
         <!--MainScreen-->
            <!--Tem que ver como coloca tela aqui...-->
+        <ContentControl x:Name="frame" Grid.Row="1" Grid.Column="1">
+            
+        </ContentControl>
         
     </Grid>
 </Window>

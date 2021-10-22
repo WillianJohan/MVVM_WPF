@@ -6,7 +6,51 @@
              xmlns:local="clr-namespace:MVVM_WPF_SimpleProject.Control"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="TITLE" FontSize="25"
+                   Grid.Column="1" Grid.Row="1"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   />
+
+        <DataGrid Name="people" 
+                  Grid.Column="1" Grid.Row="2"
+                  BorderThickness="0" 
+                  Background="White"
+                  AlternatingRowBackground="LightGray"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  CanUserReorderColumns="False"
+                  AutoGenerateColumns="False"
+                  SelectionMode="Extended"
+                  >
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="auto" Header="Nome" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Width="auto" Header="Sobrenome" Binding="{Binding Path=LastName}"/>
+                <DataGridTemplateColumn Width="auto" Header="Data de Nascimento">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=BirthDate, StringFormat={}{0:dd.MM.yy HH:mm}}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Width="auto" Header="Telefone"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
     </Grid>
 </UserControl>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVVM_WPF_SimpleProject.Model;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,8 @@ namespace MVVM_WPF_SimpleProject
     /// </summary>
     public partial class App : Application
     {
+        
     }
+
+   
 }
